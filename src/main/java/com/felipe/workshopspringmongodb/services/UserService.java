@@ -22,7 +22,6 @@ public class UserService {
             return user.get();
         }
         throw new ObjectNotFoundException("Objeto não encontrado");
-
     }
 
 
@@ -37,6 +36,13 @@ public class UserService {
 
     public List<User> findAll() {
         return repo.findAll();
+    }
+
+    public User insert(User obj) {
+        return repo.insert(obj);
+    }
+    public User fromDTO(UserDTO objDto){
+        return new User(objDto.getId(),objDto.getEmail(),objDto.getName());
     }
 
 }
