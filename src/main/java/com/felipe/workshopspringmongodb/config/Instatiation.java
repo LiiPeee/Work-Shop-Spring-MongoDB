@@ -29,7 +29,7 @@ public class Instatiation implements CommandLineRunner {
         User felipe = new User(null,"felipe","felipesl@gmail.com");
         User rodolfo = new User(null,"rodolfo","rodolfosl@gmail.com");
 
-        userService.save(maria);
+
         userService.save(Arrays.asList(maria,joao,bob,tiago,felipe,rodolfo));
 
 //        list.addAll(Arrays.asList(maria,joao,bob));
@@ -38,7 +38,7 @@ public class Instatiation implements CommandLineRunner {
 //
 //        }
 
-//       userRepository.insert(Arrays.asList(maria,joao,bob,tiago,felipe,rodolfo));
+
 
     }
 }

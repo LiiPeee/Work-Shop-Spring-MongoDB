@@ -1,16 +1,25 @@
 package com.felipe.workshopspringmongodb.dto;
 
 import com.felipe.workshopspringmongodb.domain.User;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+import org.springframework.boot.context.properties.ConstructorBinding;
 
-import java.io.Serializable;
+import java.util.Optional;
 
-public class UserDTO implements Serializable {
+@Getter
+@Setter
+@AllArgsConstructor
+@NoArgsConstructor
+
+public class UserDTO {
     private String id;
     private String name;
     private String email;
 
-    public UserDTO() {
-    }
+
 
    public UserDTO(User obj){
         id = obj.getId();
@@ -18,27 +27,8 @@ public class UserDTO implements Serializable {
         email = obj.getEmail();
    }
 
-    public String getId() {
-        return id;
-    }
 
-    public void setId(String id) {
-        this.id = id;
-    }
 
-    public String getName() {
-        return name;
-    }
 
-    public void setName(String name) {
-        this.name = name;
-    }
 
-    public String getEmail() {
-        return email;
-    }
-
-    public void setEmail(String email) {
-        this.email = email;
-    }
 }
