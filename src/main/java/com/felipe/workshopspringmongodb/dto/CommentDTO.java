@@ -15,8 +15,4 @@ public class CommentDTO {
     private String text;
     private Date date;
     private AuthorDTO authorDTO;
-
-
-
-
 }
